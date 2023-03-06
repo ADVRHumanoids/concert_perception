@@ -1,5 +1,5 @@
 <launch>
-    <arg name="use_front_velodyne" default="true"/>
+    <arg name="use_front_velodyne" default="false"/>
     <arg name="use_back_velodyne" default="false"/>
 
     <group if="$(arg use_front_velodyne)" ns="front_base">

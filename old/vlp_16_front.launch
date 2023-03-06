@@ -1,9 +1,0 @@
-<launch>
-<group ns="front_base">
-    <include file="$(find velodyne_pointcloud)/launch/VLP16_points.launch">
-        <arg name="frame_id" value="velodyne_front_base_link" />
-        <arg name="device_ip" value="192.168.1.201" />
-        <arg name="port" default="2368" />
-    </include>
-</group>
-</launch>
