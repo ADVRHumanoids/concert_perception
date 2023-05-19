@@ -2,18 +2,18 @@
     <arg name="use_front_velodyne" default="false"/>
     <arg name="use_back_velodyne" default="false"/>
 
-    <group if="$(arg use_front_velodyne)" ns="front_base">
+    <group if="$(arg use_front_velodyne)" ns="VLP16_lidar_front">
         <include file="$(find velodyne_pointcloud)/launch/VLP16_points.launch">
-            <arg name="frame_id" value="velodyne_front_base_link" />
-            <arg name="device_ip" value="192.168.1.201" />
+            <arg name="frame_id" value="VLP16_lidar_front_base_link" />
+            <arg name="device_ip" value="10.24.10.201" />
             <arg name="port" default="2368" />
         </include>
     </group>
 
-    <group if="$(arg use_back_velodyne)" ns="back_base">
+    <group if="$(arg use_back_velodyne)" ns="VLP16_lidar_back">
         <include file="$(find velodyne_pointcloud)/launch/VLP16_points.launch">
-            <arg name="frame_id" value="velodyne_back_base_link" />
-            <arg name="device_ip" value="192.168.1.202" />
+            <arg name="frame_id" value="VLP16_lidar_back_base_link" />
+            <arg name="device_ip" value="10.24.10.202" />
             <arg name="port" default="2369" />
         </include>
     </group>
