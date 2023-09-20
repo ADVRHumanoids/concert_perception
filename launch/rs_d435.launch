@@ -32,8 +32,8 @@
 
   <!-- Launch front D435i camera -->
   <group if="$(arg enable_camera_front)" ns="$(arg camera1)">
-    <!-- <include file="$(find realsense2_camera)/launch/includes/nodelet.launch.xml"> -->
-    <include file="$(find realsense2_camera)/launch/rs_camera.launch">
+    <include file="$(find realsense2_camera)/launch/includes/nodelet.launch.xml">
+    <!-- <include file="$(find realsense2_camera)/launch/rs_camera.launch"> -->
       <arg name="device_type"           value="$(arg device_type_camera1)"/>
       <arg name="serial_no"             value="$(arg serial_no_camera1)"/>
       <arg name="tf_prefix"		          value="$(arg tf_prefix_camera1)"/>
@@ -48,13 +48,13 @@
       <arg name="clip_distance"         value="$(arg clip_distance)"/>
     </include>
     <!-- Publish static tf -->
-    <node pkg="tf" type="static_transform_publisher" name="tf_broadcaster" args="0 0 0 0 0 0 /$(arg tf_prefix_camera1)_bottom_screw_frame /$(arg tf_prefix_camera1)_link 5"/>
+    <node pkg="tf" type="static_transform_publisher" name="tf_broadcaster" args="0 0 0 0 0 0 /$(arg tf_prefix_camera1)_bottom_screw_frame /$(arg tf_prefix_camera1)_link 200"/>
   </group>
 
   <!-- Launch back D435i camera -->
   <group if="$(arg enable_camera_back)" ns="$(arg camera2)">
-    <!-- <include file="$(find realsense2_camera)/launch/includes/nodelet.launch.xml"> -->
-    <include file="$(find realsense2_camera)/launch/rs_camera.launch">
+    <include file="$(find realsense2_camera)/launch/includes/nodelet.launch.xml">
+    <!-- <include file="$(find realsense2_camera)/launch/rs_camera.launch"> -->
       <arg name="device_type"           value="$(arg device_type_camera2)"/>
       <arg name="serial_no"             value="$(arg serial_no_camera2)"/>
       <arg name="tf_prefix"		          value="$(arg tf_prefix_camera2)"/>
@@ -74,8 +74,8 @@
 
   <!-- Launch drill D435i camera -->
   <group if="$(arg enable_camera_drill)" ns="$(arg camera3)">
-    <!-- <include file="$(find realsense2_camera)/launch/includes/nodelet.launch.xml"> -->
-    <include file="$(find realsense2_camera)/launch/rs_camera.launch">
+    <include file="$(find realsense2_camera)/launch/includes/nodelet.launch.xml">
+    <!-- <include file="$(find realsense2_camera)/launch/rs_camera.launch"> -->
       <arg name="device_type"           value="$(arg device_type_camera3)"/>
       <arg name="serial_no"             value="$(arg serial_no_camera3)"/>
       <arg name="tf_prefix"		          value="$(arg tf_prefix_camera3)"/>
