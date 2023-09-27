@@ -1,0 +1,12 @@
+<launch>
+    <!-- <remap from="/usboard_v2/sensor0" to="topic2" /> -->
+    <remap from="/usboard_v2/sensor0" to="/bosch_uss5/ultrasound_fl_lat"/>
+    <remap from="/usboard_v2/sensor1" to="/bosch_uss5/ultrasound_fl_sag"/>
+    <remap from="/usboard_v2/sensor2" to="/bosch_uss5/ultrasound_fr_lat"/>
+    <remap from="/usboard_v2/sensor3" to="/bosch_uss5/ultrasound_fr_sag"/>
+    <remap from="/usboard_v2/sensor4" to="/bosch_uss5/ultrasound_rl_lat"/>
+    <remap from="/usboard_v2/sensor5" to="/bosch_uss5/ultrasound_rl_sag"/>
+    <remap from="/usboard_v2/sensor6" to="/bosch_uss5/ultrasound_rr_lat"/>
+    <remap from="/usboard_v2/sensor7" to="/bosch_uss5/ultrasound_rr_sag"/>
+    <include file="$(find neo_usboard_v2)/launch/neo_usboard_v2.launch"/>
+</launch>
