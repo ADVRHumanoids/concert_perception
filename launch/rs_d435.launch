@@ -5,7 +5,9 @@
 
   <arg name="serial_no_camera1"    			default="236422072244"/>
   <arg name="serial_no_camera2"    			default="236522071300"/>
-  <arg name="serial_no_camera3"    			default="943222072865"/>
+  <!-- <arg name="serial_no_camera3"    			default="943222072865"/> -->
+
+  <arg name="serial_no_camera3"                         default="236422074515"/>
 
   <arg name="camera1"              			default="D435i_camera_front"/>
   <arg name="camera2"              			default="D435i_camera_back"/>
@@ -28,7 +30,7 @@
 
   <arg name="enable_camera_front"           default="true"/>
   <arg name="enable_camera_back"            default="true"/>
-  <arg name="enable_camera_drill"           default="false"/>
+  <arg name="enable_camera_drill"           default="true"/>
 
   <!-- Launch front D435i camera -->
   <group if="$(arg enable_camera_front)" ns="$(arg camera1)">
